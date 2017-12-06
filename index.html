@@ -14,7 +14,9 @@
 		<link rel="stylesheet" type="text/css" href="http://www.pionline.com/assets/special-report-pages/2015-ceo-pay/styles.css"> 
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 		<style type="text/css">
-			body{ font-family: 'Open Sans', sans-serif; max-width: 720px;}
+			body {
+		 	font-family: 'Open Sans', sans-serif; max-width: 720px;
+		 		}
 			#footnote{ font-size: 10px; padding: 0;}
 			.tooltip {
 				position: absolute;
@@ -26,6 +28,27 @@
 				border-radius: 5px;
 				-webkit-border-radius: 5px;
 				-moz-border-radius: 5px;
+				font-family: 'Open Sans', sans-serif;
+			}
+
+			tr {
+				font-family: 'Open Sans', sans-serif;
+			    font: 12px/110% Arial;
+		        font-weight: bold;
+			}
+
+			.mytooltip {
+				  radius: 4px !important;
+				  background-color: black;
+				   color: rgb(255, 77, 85) !important;
+				  padding: 5px 20px;
+				  border-radius: 20px;
+				  margin: 50px;
+				  text-align: center;
+				  font: bold 14px ;
+				  font-stretch: condensed;
+				  text-decoration: none;
+				  box-shadow: 0 0 10px black;
 			}
 		</style>
 	</head>
@@ -33,7 +56,7 @@
 		<img src="img/PI_BestPlacestoWork_2017.jpg" alt="Title Logo" style="float:left">
 		<table id="example1" class="display" cellspacing="0" width="100%">
 		<thead>	
-			<tr><th>Company</th><th>Location</th><th>Category</th><th>No. of years won</th></tr>	
+			<tr><th>Company</th><th>Location</th><th>Category</th><th>No. of years won <br>between 2012-17</th></tr>	
 		</thead>
 		<tbody>	
 				<tr><th>361 Capital</th><th>Denver</th><th>Small employers</th><th>2</th></tr>
@@ -146,7 +169,7 @@
 	        var sGrade = $(nTds[4]).text();
 	         
 	        if ( companyName == "361 Capital" )
-	            sTitle =  ' will provide a first class (A) level of CSS support.';
+	            sTitle =  'Winning years : 2016, 2017';
 	        else
 	            sTitle = ' will provide an undefined level of CSS support.';
 	         
@@ -164,12 +187,11 @@
     		dataTable.$('tr').tooltip( {
 			    "delay": 0,
 			    "track": true,
-			    "fade": 250
+			    "fade": 10000,
+			    tooltipClass: "mytooltip",
     		} );
 
 		} );
-
-
 
 	</script>
 	</body>
